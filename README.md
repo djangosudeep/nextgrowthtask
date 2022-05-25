@@ -1,14 +1,10 @@
 ## Admin Facing:
 
-    Link 
-
-        Home: https://mydemoapp08.herokuapp.com/
+    Link For Home Page: https://mydemoapp08.herokuapp.com/
 
 ## User Facing:
 
-    Link
-
-        Home: https://mydemoapp08.herokuapp.com/user/home
+    Link for Home page: https://mydemoapp08.herokuapp.com/user/home
 
 
 
@@ -25,7 +21,8 @@
 
 
 ## Note:
-    You can signup for once and use those credentials for both of the admin and the user as well. If you want to have seperate users you can create seperate credentials for both the Admin and the user.
+    You can signup for once and use those credentials for both of the admin and the user as well. 
+    If you want to have seperate users you can create seperate credentials for both the Admin and the user.
 
 
 
