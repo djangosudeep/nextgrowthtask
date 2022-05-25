@@ -1,0 +1,21 @@
+1) Both the Flask and the Django are the python application frameworks.
+
+2)When the application we have to build is a simple application then we can go with the Flask Framework.
+    2.a)Because the Flask Framework is very supportive for the simple application.
+    2.b)we can add more functionality to the application and can make it as a complex application as well.
+    
+3)While coming to the Django Framework, It provides many out of box features and reduces time to build complex applications.
+    3.a)so when the particular application is a complex one we can go with the Django Framework.
+
+4)When the Requirements has to be changed dynamically, Django Framework is not suitable to build the application. 
+    4.a)while in flask we can add more tasks whenever there is change in the requirement.
+
+5)If the time to develop the particular web application is less than we can go with the Django.
+    5.a)Because Django comes with a built-in template engine that saves a lot of development time.
+    5.b)And the Flask’s template engine Jinja2 is based on Django’s template engine.
+
+6)When we are new to the web application development and we have to choose between Flask and the Django Frameworks, we can Choose Flask.
+    6.a)Because With Flask to build some application, you can start with some necessary programming skills.
+    6.b)But with the Django, It needs some prior homework for you to write even a Hello World program.
+
+7) Both Flask and the Django has very large programming communities, so we can go with any of them.

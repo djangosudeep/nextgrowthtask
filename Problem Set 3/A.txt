@@ -1,0 +1,25 @@
+Why Scheduling Periodic Tasks:
+Scheduling the periodic tasks really helps us to save a lot of time.
+we need not to worry about the deadlines and about the task that runs every day or every hour. we just schedule the task and the task will automatically runs every time with the time we mention to run.
+
+
+ISINs downloading example:
+for example we have to download the ISIN(International Securities Identification Number) every 24 hours.
+we can schedule a periodic task to download the ISINs for every 24 hours.
+The reason why we have to used periodic task for this task is, the ISIN numbers are used for the clearing and settlements in the bussiness. 
+So we have to keep track of these numbers everyday so that holdings of institutional investors can be tracked consistently across markets worldwide because the numbers ensure a consistent format.
+
+
+Does Priodic Tasks are reliable?
+we can say the scheduling of the periodic tasks are reliable, because the entire thing is done by the machine itself.
+we have to write more clean code and placing the exception handlers everywhere they need, so that our code will not crash and works even there is an error occured during the performance of the task.
+
+
+
+Problems with periodic Tasks:
+There is a Couple of problems is that when the users are increasing there will be a burden on the processors and the usage memory of the task is also increasing.
+
+
+Overcoming those problems in the production: 
+To overcome this problem during the production we can buy a new cloud storage or maintain servers and run multiple tasks in parallel to reduce the burden on the processor.
+we can proritize the task so that the task with highest priority will be executed first and the task with least priority will be executed later, This will help us to increase our bussiness and the lot of time will be saved by performing the highest priority tasks first.
