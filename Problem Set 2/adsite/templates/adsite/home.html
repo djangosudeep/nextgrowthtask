@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Page{% endblock %}
+
+
+{% block header %}
+    <h4>Hello Admin</h4>
+{% endblock %}
+
+{% block section %}
+    <button id= "btn1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+      </svg>  Home</button><br>
+    <button  class = "active" id = "btn2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg>  Add Apps</button> <br>
+    <button  id = "btn3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+      </svg>  Logout</button>
+{% endblock %}
+
+{% block content %}
+    {% if data %}
+    <img class="logo2"  src = "{{data.icon}}" alt = "example img">
+    <form method = "POST" id="myform" action = "/">
+        {% csrf_token %}
+        
+        <input id="formdata" type ="text" name ="appname" value = {{data.appname}} placeholder = "Enter App Name" required>
+        <input  id="formdata" type ="text" name ="applink" value={{data.applink}} id = "applink" required><br><br>
+        <input type="hidden" name="icon" value="{{data.icon}}">
+        <input type="hidden" name="website" value="{{data.website}}">
+        
+        <label>App Category</label>
+
+        <select  id="formdata" name = "cat">
+            <option value = "{{data.category}}">{{data.category}}</option>
+        </select>  
+        <br>
+        <br>
+        <input type="text" class = "points" placeholder = "ENTER POINTS" name="points" required><br>
+        <button class = "active">SUBMIT</button>
+
+    </form>
+
+        {% else %}
+
+        <img class="logo"  src = "https://pixsector.com/cache/517d8be6/av5c8336583e291842624.png" alt = "example img">
+
+        <form method = "POST" id="myform" action = "">
+            {% csrf_token %}
+
+        
+
+        <input type ="text" name ="appname" placeholder = "Enter App Name" required>
+        <input type ="text" name ="applink" id = "applink" placeholder = "App Link" required><br><br>
+       <label>App Category</label>
+        <select name = "cat">
+            <option value = "App Category">App Category</option>
+        </select>   
+        <br>
+        <br>
+        <button class = "active">App points</button>
+    </form>
+    {% endif %}
+
+
+    <script type="text/javascript">
+        const link = document.getElementById("applink");
+        const myform = document.getElementById("myform")
+        link.addEventListener("keyup",(e)=>{
+            e.preventDefault();
+            myform.submit();
+        })
+
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+
+    btn1.addEventListener("click", () => {
+        window.location.replace('https://mydemoapp08.herokuapp.com/')
+    })
+
+    btn2.addEventListener("click", () => {
+        window.location.replace('https://mydemoapp08.herokuapp.com/submit')
+    })
+
+    btn3.addEventListener("click", () => {
+        console.log("clicked")
+        window.location.replace('https://mydemoapp08.herokuapp.com/logout')
+    })
+
+    </script>
+{% endblock %}
